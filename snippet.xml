@@ -1,0 +1,145 @@
+	<!-- BEGIN SNIPPET -->
+    <!-- Move Windows -->
+    <keybind key="W-C-Right">
+      <action name="MoveRelative">
+        <x>20</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-C-Left">
+      <action name="MoveRelative">
+        <x>-20</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-C-Up">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-20</y>
+      </action>
+    </keybind>
+    <keybind key="W-C-Down">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>20</y>
+      </action>
+    </keybind>
+    <!-- Resize windows -->
+    <keybind key="W-A-Down">
+      <action name="ResizeRelative">
+        <bottom>20</bottom>
+      </action>
+    </keybind>
+    <keybind key="W-A-Up">
+      <action name="ResizeRelative">
+        <bottom>-20</bottom>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="ResizeRelative">
+        <right>-20</right>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="ResizeRelative">
+        <right>20</right>
+      </action>
+    </keybind>
+
+    <!-- Snapping And Fullscreen -->
+    <keybind key="W-Up">
+      <action name="MaximizeFull"/>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="UnmaximizeFull"/>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+      </action>
+      <action name="MoveToEdge">
+        <direction>west</direction>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+      </action>
+      <action name="MoveToEdge">
+        <direction>east</direction>
+      </action>
+    </keybind>
+    <!-- tiles -->
+    <keybind key="W-bracketleft">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>1370</width>
+        <height>50%</height>
+      </action>
+      <action name="GrowToEdgeWest"/>
+    </keybind>
+    <keybind key="W-bracketright">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>1370</width>
+        <height>50%</height>
+      </action>
+      <action name="GrowToEdgeWest"/>
+    </keybind>
+    <keybind key="W-semicolon">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-apostrophe">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-period">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-slash">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-comma">
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>620</width>
+        <height>320</height>
+      </action>
+    </keybind>
+    <keybind key="C-S-d">
+      <action name="ToggleDecorations"/>
+    </keybind>
+
+	<!-- END SNIPPET -->
