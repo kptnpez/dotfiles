@@ -12,8 +12,11 @@ cd			# change directory to home
 
 # Using functions for more flexibility 
 
-function inst_vimconf {
-	if [ -f .vimrc ]
+function install_vimconf {
+	if [ -h .vimrc ]
+	then
+		echo ".vimrc is already a symlink!"
+	elif [ -f .vimrc ]
 	then 
 		# .vimrc found, creating backup"
 		mv .vimrc .vimrc.backup
@@ -28,7 +31,7 @@ function inst_vimconf {
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	fi
 	# Creating new .vimrc
-	cp $dir/.vimrc ~/.vimrc
+	ln -s $dir/.vimrc ~/.vimrc
 }
 
 function start_vim {
@@ -43,7 +46,7 @@ function start_vim {
 	vim
 }
 
-function inst_weechat {
+function install_weechat {
 	if [ -f .weechat/weechat.conf ]
 	then 
 		# weechat.conf found, creating backup"
@@ -51,7 +54,7 @@ function inst_weechat {
 	fi
 
 	# Creating new .weechat.conf
-	cp $dir/weechat/weechat.conf ~/.weechat/weechat.conf
+	ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
 
 	# Copying Plugins 
 	cp $dir/weechat/plugins/buffers.pl ~/.weechat/perl/autoload/buffers.pl
@@ -63,7 +66,7 @@ function ranger {
 	echo "ranger!"
 }
 
-
 # lets execute the functions yay! 'Ö' 
-inst_vimconf
-start_vim
+install_vimconf
+#start_vim
+#install_weechat
