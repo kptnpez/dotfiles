@@ -28,10 +28,17 @@ function install_vimconf {
 		echo "---------------------------------------------------"
 		echo "Vundle already exist. Skipping Vundle installation."
 	else
-	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+		git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	fi
 	# Creating new .vimrc
-	ln -s $dir/.vimrc ~/.vimrc
+	if [ ! -h .vimrc ] && [ ! -f .vimrc ]
+	then
+		echo "creating vim symlinks"
+		ln -s $dir/.vimrc ~/.vimrc
+	fi
+
+	echo "-----------------------------------------"
+	read -p  "vim configs copied, press any key to continue"
 }
 
 function start_vim {
@@ -47,19 +54,41 @@ function start_vim {
 }
 
 function install_weechat {
-	if [ -f .weechat/weechat.conf ]
+	if [ -h .weechat/weechat.conf ]
+	then
+		echo "weechcat.conf is already a symlink!"
+	elif [ -f .weechat/weechat.conf ]
 	then 
 		# weechat.conf found, creating backup"
 		mv .weechat/weechat.conf .weechat/weechat.conf.backup
 	fi
 
 	# Creating new .weechat.conf
-	ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
+	if [ ! -h .vimrc ] && [ ! -f .vimrc ]
+	then
+		echo "creating symlink for weechat.conf"
+		ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
+	fi
 
 	# Copying Plugins 
-	cp $dir/weechat/plugins/buffers.pl ~/.weechat/perl/autoload/buffers.pl
-	cp $dir/weechat/plugins/iset.pl ~/.weechat/perl/autoload/iset.pl
-	cp $dir/weechat/plugins/highmon.pl ~/.weechat/perl/autoload/highmon.pl
+	if [ ! -f .weechat/perl/autoload/buffers.pl ]
+	then
+		cp $dir/weechat/plugins/buffers.pl ~/.weechat/perl/autoload/buffers.pl
+	fi
+
+	if [ ! -f .weechat/perl/autoload/iset.pl ]
+	then
+		cp $dir/weechat/plugins/iset.pl ~/.weechat/perl/autoload/iset.pl
+	fi
+	
+	if [ ! -f .weechat/perl/autoload/iset.pl ]
+	then
+		cp $dir/weechat/plugins/highmon.pl ~/.weechat/perl/autoload/highmon.pl
+	fi
+
+	echo "-----------------------------------------"
+	read -p "weechat configs copied, press any key to continue"
+	
 }
 
 function ranger {
@@ -68,5 +97,5 @@ function ranger {
 
 # lets execute the functions yay! 'Ö' 
 install_vimconf
-#start_vim
-#install_weechat
+install_weechat
+start_vim
