@@ -4,15 +4,24 @@
 # created by pez
 # https://github.com/kptnpez/dotfiles
 
-# Installing applications" 
-# pacman -S vim weechat ranger"
+# installing applications" 
+# pacman -s vim weechat ranger"
 
 dir=$(pwd)	# saving pwd in var 'dir'
 cd			# change directory to home
 
-# Using functions for more flexibility 
-
 function install_vimconf {
+
+	# installing vundle for vim
+	if [ ! -d ~/.vim/bundle/vundle.vim ]
+	then
+		echo "Installing Vundle"
+		git clone https://github.com/gmarik/vundle.vim.git ~/.vim/bundle/vundle.vim
+	else
+		echo "Vundle already exists."
+	fi
+
+	# Checking Vimrc, creating symlink
 	if [ -h .vimrc ]
 	then
 		echo ".vimrc is already a symlink!"
@@ -20,19 +29,8 @@ function install_vimconf {
 	then 
 		# .vimrc found, creating backup"
 		mv .vimrc .vimrc.backup
-	fi
-
-	# Installing vundle for vim
-	if [ -d ~/.vim/bundle/Vundle.vim ]
-	then
-		echo "---------------------------------------------------"
-		echo "Vundle already exist. Skipping Vundle installation."
 	else
-		git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	fi
-	# Creating new .vimrc
-	if [ ! -h .vimrc ] && [ ! -f .vimrc ]
-	then
+		# Creating new .vimrc
 		echo "creating vim symlinks"
 		ln -s $dir/.vimrc ~/.vimrc
 	fi
@@ -61,39 +59,52 @@ function install_weechat {
 	then 
 		# weechat.conf found, creating backup"
 		mv .weechat/weechat.conf .weechat/weechat.conf.backup
+	else
+		# Creating new .weechat.conf
+		if [ ! -h .weechat/weechat.conf ] && [ ! -f .weechat/weechat.conf ]
+		then
+			echo "creating symlink for weechat.conf"
+			ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
+		fi
 	fi
 
-	# Creating new .weechat.conf
-	if [ ! -h .vimrc ] && [ ! -f .vimrc ]
-	then
-		echo "creating symlink for weechat.conf"
-		ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
-	fi
+	i=0	
+	cd $dir/weechat/plugins 
+	plugin_dir=$(pwd) # saving plugin folder
 
-	# Copying Plugins 
-	if [ ! -f .weechat/perl/autoload/buffers.pl ]
-	then
-		cp $dir/weechat/plugins/buffers.pl ~/.weechat/perl/autoload/buffers.pl
-	fi
+	for f in *.pl; do # adding perl plugins to array
+		plugins[i]=$f
+		((i++))
+	done
 
-	if [ ! -f .weechat/perl/autoload/iset.pl ]
-	then
-		cp $dir/weechat/plugins/iset.pl ~/.weechat/perl/autoload/iset.pl
-	fi
+	for f in ${plugins[*]}; do	# copying files 
+		if [ ! -f ~/.weechat/perl/autoload/$f ]
+		then
+			cp $f ~/.weechat/perl/autoload/$f
+		fi
+	done
 	
-	if [ ! -f .weechat/perl/autoload/iset.pl ]
-	then
-		cp $dir/weechat/plugins/highmon.pl ~/.weechat/perl/autoload/highmon.pl
-	fi
-
 	echo "-----------------------------------------"
 	read -p "weechat configs copied, press any key to continue"
 	
 }
 
-function ranger {
-	echo "ranger!"
-}
+
+#	tmp backup
+#	if [ ! -f .weechat/perl/autoload/buffers.pl ]
+#	then
+#		cp $dir/weechat/plugins/buffers.pl ~/.weechat/perl/autoload/buffers.pl
+#	fi
+#
+#	if [ ! -f .weechat/perl/autoload/iset.pl ]
+#	then
+#		cp $dir/weechat/plugins/iset.pl ~/.weechat/perl/autoload/iset.pl
+#	fi
+#	
+#	if [ ! -f .weechat/perl/autoload/iset.pl ]
+#	then
+#		cp $dir/weechat/plugins/highmon.pl ~/.weechat/perl/autoload/highmon.pl
+#	fi
 
 # lets execute the functions yay! 'Ö' 
 install_vimconf
