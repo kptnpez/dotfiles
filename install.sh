@@ -11,7 +11,7 @@ dir=$(pwd)	# saving pwd in var 'dir'
 cd			# change directory to home
 plugin_dir=$dir/weechat/plugins # saving plugin folder
 
-function install_vimconf {
+install_vimconf() {
 
 	# installing vundle for vim
 	if [ ! -d ~/.vim/bundle/vundle.vim ]
@@ -40,19 +40,18 @@ function install_vimconf {
 	read -p  "vim configs copied, press any key to continue"
 }
 
-function start_vim {
-	# Starting Vim 
+start_vim() {
+	# Starting vim and give instructions so vundle can install the plugins
 	echo "--------------------------------------------"
 	echo "Starting Vim, ignore any Errors and type in"
 	echo ":PluginInstall"
 	echo "then exit vim."
 	echo "Press any key to continue"
-	echo "--------------------------------------------"
-	read 
+	read -p  "--------------------------------------------"
 	vim
 }
 
-function install_weechat {
+install_weechat() {
 	if [ -h .weechat/weechat.conf ]
 	then
 		echo "weechcat.conf is already a symlink!"
@@ -91,7 +90,16 @@ function install_weechat {
 	
 }
 
+install_ranger() {
+	echo "Ranger! wuhu :)" 
+}
+
+install_cmus() {
+	echo "cmus, yeaaa"
+}
+
+
 # lets execute the functions yay! 'Ö' 
-#install_vimconf
+install_vimconf
 install_weechat
-#start_vim
+start_vim

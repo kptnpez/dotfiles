@@ -103,7 +103,7 @@ noremap <Right> <nop>
 " Disable annoying ex mode (Q)
 map Q <nop>
 
-"toggle relativenumber using <leader>r 
+" toggle relativenumber using <leader>r 
 nnoremap <leader>r :call NumberToggle()<CR>
 
 function! NumberToggle()
@@ -113,6 +113,11 @@ function! NumberToggle()
 		set relativenumber
 	endif
 endfunction
+
+" easier buffer moving with <leader>b / <leader>n  
+noremap <leader>b :bprevious<CR>
+noremap <leader>n :bnext<CR>
+
 
 """ Plugin Settings
 "		Lightline
