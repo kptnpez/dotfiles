@@ -9,6 +9,7 @@
 
 dir=$(pwd)	# saving pwd in var 'dir'
 cd			# change directory to home
+plugin_dir=$dir/weechat/plugins # saving plugin folder
 
 function install_vimconf {
 
@@ -69,8 +70,7 @@ function install_weechat {
 	fi
 
 	i=0	
-	cd $dir/weechat/plugins 
-	plugin_dir=$(pwd) # saving plugin folder
+	cd $plugin_dir #switching to plugin dir
 
 	for f in *.pl; do # adding perl plugins to array
 		plugins[i]=$f
@@ -80,7 +80,9 @@ function install_weechat {
 	for f in ${plugins[*]}; do	# copying files 
 		if [ ! -f ~/.weechat/perl/autoload/$f ]
 		then
-			cp $f ~/.weechat/perl/autoload/$f
+			cp $f ~/.weechat/perl/autoload/
+		else
+			echo "$f exists"
 		fi
 	done
 	
@@ -89,24 +91,7 @@ function install_weechat {
 	
 }
 
-
-#	tmp backup
-#	if [ ! -f .weechat/perl/autoload/buffers.pl ]
-#	then
-#		cp $dir/weechat/plugins/buffers.pl ~/.weechat/perl/autoload/buffers.pl
-#	fi
-#
-#	if [ ! -f .weechat/perl/autoload/iset.pl ]
-#	then
-#		cp $dir/weechat/plugins/iset.pl ~/.weechat/perl/autoload/iset.pl
-#	fi
-#	
-#	if [ ! -f .weechat/perl/autoload/iset.pl ]
-#	then
-#		cp $dir/weechat/plugins/highmon.pl ~/.weechat/perl/autoload/highmon.pl
-#	fi
-
 # lets execute the functions yay! 'Ö' 
-install_vimconf
+#install_vimconf
 install_weechat
-start_vim
+#start_vim
