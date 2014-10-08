@@ -14,10 +14,10 @@ plugin_dir=$dir/weechat/plugins # saving plugin folder
 install_vimconf() {
 
 	# installing vundle for vim
-	if [ ! -d ~/.vim/bundle/vundle.vim ]
+	if [ ! -d ~/.vim/bundle/Vundle.vim ]
 	then
 		echo "Installing Vundle"
-		git clone https://github.com/gmarik/vundle.vim.git ~/.vim/bundle/vundle.vim
+		git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	else
 		echo "Vundle already exists."
 	fi
@@ -98,8 +98,27 @@ install_cmus() {
 	echo "cmus, yeaaa"
 }
 
+install_xdefaults() {
+
+	# Checking Xdefaults, creating symlink
+	if [ -h .Xdefaults ]
+	then
+		echo ".Xdefaults is already a symlink!"
+	elif [ -f .Xdefaults ]
+	then 
+		# .Xdefaults found, creating backup"
+		mv .Xdefaults .Xdefaults.backup
+	else
+		# Creating new .Xdefaults
+		echo "creating Xdefault symlinks"
+		ln -s $dir/.Xdefaults ~/.Xdefaults
+	fi
+}
 
 # lets execute the functions yay! 'Ö' 
 install_vimconf
 install_weechat
 start_vim
+#install_ranger
+#install_cmus
+#install_xdefaults
