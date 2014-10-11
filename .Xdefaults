@@ -3,32 +3,63 @@
 ! URxvt.color1  : #000000
 
 ! TERMINAL COLOURS
-URxvt*foreground: #D3D3D3
-URxvt*background: [95]#111111
+URxvt*foreground: #F3F3F3
+URxvt*background: #1F1F22
+URxvt*cursorColor: #F3F3F3
+
 !black
-URxvt*color0: #181818
-URxvt*color8: #181818
+URxvt*color0: #333333
+URxvt*color8: #333333
 !red
-URxvt*color1: #D7D7D7
-URxvt*color9: #D7D7D7
+URxvt*color1: #BF5C56
+URxvt*color9: #BF5C56
 !green
-URxvt*color2: #3399FF
-URxvt*color10: #3399FF
+URxvt*color2: #97B19C
+URxvt*color10: #97B19C
 !yellow
-URxvt*color3: #666666
-URxvt*color11: #666666
+URxvt*color3: #D7BD8A
+URxvt*color11: #D7BD8A
 !blue
-URxvt*color4: #303030
-URxvt*color12: #303030
+URxvt*color4: #545F72
+URxvt*color12: #545F72
 !magenta
-URxvt*color5: #15406c
-URxvt*color13: #2A82DB
+URxvt*color5: #DD949A
+URxvt*color13: #DD949A
 !cyan
-URxvt*color6: #D4D4D4
-URxvt*color14: #D4D4D4
+URxvt*color6: #BE926B
+URxvt*color14: #BE926B
 !white
-URxvt*color7: #D3D3D3
-URxvt*color15: #D3D3D3
+URxvt*color7: #F4F4F2
+URxvt*color15: #F4F4F2
+
+!!---- OLD TERMINAL COLORS - monochrom-blue
+!URxvt*foreground: #D3D3D3
+!URxvt*background: [95]#111111
+!!black
+!URxvt*color0: #181818
+!URxvt*color8: #181818
+!!red
+!URxvt*color1: #D7D7D7
+!URxvt*color9: #D7D7D7
+!!green
+!URxvt*color2: #3399FF
+!URxvt*color10: #3399FF
+!!yellow
+!URxvt*color3: #666666
+!URxvt*color11: #666666
+!!blue
+!URxvt*color4: #303030
+!URxvt*color12: #303030
+!!magenta
+!URxvt*color5: #15406c
+!URxvt*color13: #2A82DB
+!!cyan
+!URxvt*color6: #D4D4D4
+!URxvt*color14: #D4D4D4
+!!white
+!URxvt*color7: #D3D3D3
+!URxvt*color15: #D3D3D3
+!URxvt*cursorColor: #D3D3D3
 
 ! FONTS
 urxvt*font: xft:cure:size=8:antialias=true
@@ -42,7 +73,6 @@ URxvt*secondaryScroll: True
 URxvt*saveLines: 1000
 URxvt*geometry: 78x24
 URxvt.cursorUnderline: False
-URxvt*cursorColor: #D3D3D3
 URxvt.cursorBlink: True
 URxvt*underlineColor: #181818
 ! URxvt*depth: 32
