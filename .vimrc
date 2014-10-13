@@ -100,6 +100,8 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
+" Exit insert mode with jk
+imap jk <Esc>
 " Disable annoying ex mode (Q)
 map Q <nop>
 
@@ -135,6 +137,4 @@ let g:startify_custom_header = [
 			\ ' Homepage:	http://kptnpez.de',
 			\ ''
 			\ ]
-
-
 
