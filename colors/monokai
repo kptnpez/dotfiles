@@ -1,4 +1,5 @@
-! special
+! colorscheme by Cacodaimon
+
 URxvt*.foreground:   #f1ebeb
 URxvt*.background:   #272822
 URxvt*.cursorColor:  #f1ebeb

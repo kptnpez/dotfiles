@@ -1,4 +1,3 @@
-!---- OLD TERMINAL COLORS - monochrom-blue
 URxvt*foreground: #D3D3D3
 URxvt*background: [95]#111111
 !black
