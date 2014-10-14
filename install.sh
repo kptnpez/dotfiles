@@ -147,6 +147,22 @@ install_xdefaults() {
 	fi
 }
 
+create() {
+	# Checking for file, creating symlink
+	if [ -h $1 ]
+	then
+		echo "$1 is already a symlink!"
+	elif [ -f $1 ]
+	then 
+		# config found, creating backup"
+		mv $1 $1.backup
+	else
+		# Creating new config
+		echo "creating $1 symlinks"
+		ln -s $dir/i3/.$1 ~/.i3status.conf
+	fi
+	echo "$1 done."
+}
 # lets execute the functions yay! 'Ö' 
 #install_vimconf
 #install_weechat
