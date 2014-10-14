@@ -16,7 +16,7 @@ Plugin 'bling/vim-bufferline'
 " Fuzzy Finder (files, mru, etc)
 Plugin 'kien/ctrlp.vim'
 
-" Glorious Colorscheme
+" Glorious Colorschemes
 Plugin 'tomasr/molokai'
 Plugin 'sickill/vim-monokai'
 Plugin 'whatyouhide/vim-gotham'
