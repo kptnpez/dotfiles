@@ -5,6 +5,10 @@
 urxvt*font: xft:cure:size=8:antialias=true
 urxvt*boldFont: xft:cure:size=8:antialias=true
 
+!urxvt*font: xft:cure:size=8:antialias=true
+!urxvt*boldFont: xft:cure:size=8:antialias=true
+
+
 ! TABS COLOURS
 ! URxvt.color0  : #979797
 ! URxvt.color1  : #000000
