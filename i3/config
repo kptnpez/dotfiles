@@ -23,6 +23,15 @@ font pango: Cure 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# Make sure steam client is forced into floating
+for_window [class="oblogout" instance="oblogout"] floating enable
+
+# Set background
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id synclient touchpadoff=1
+
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
