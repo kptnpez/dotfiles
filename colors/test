@@ -1,0 +1,36 @@
+! special
+URxvt*.foreground:   #f3f3f3
+URxvt*.background:   #1f1f22
+URxvt*.cursorColor:  #f3f3f3
+
+! black
+URxvt*.color0:       #333333
+URxvt*.color8:       #333333
+
+! red
+URxvt*.color1:       #ae3f38
+URxvt*.color9:       #bf5c56
+
+! green
+URxvt*.color2:       #6ab177
+URxvt*.color10:      #97b19c
+
+! yellow
+URxvt*.color3:       #d7b26a
+URxvt*.color11:      #d7bd8a
+
+! blue
+URxvt*.color4:       #40619a
+URxvt*.color12:      #545f72
+
+! magenta
+URxvt*.color5:       #dd7079
+URxvt*.color13:      #dd949a
+
+! cyan
+URxvt*.color6:       #ad7442
+URxvt*.color14:      #be926b
+
+! white
+URxvt*.color7:       #f4f4f2
+URxvt*.color15:      #f4f4f2

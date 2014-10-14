@@ -18,6 +18,8 @@ Plugin 'kien/ctrlp.vim'
 
 " Glorious Colorscheme
 Plugin 'tomasr/molokai'
+Plugin 'sickill/vim-monokai'
+Plugin 'whatyouhide/vim-gotham'
 Plugin 'nanotech/jellybeans.vim'
 
 " Easy...motions..yeah.
