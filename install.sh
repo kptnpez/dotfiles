@@ -5,7 +5,7 @@
 # https://github.com/kptnpez/dotfiles
 
 # installing applications" 
-# pacman -s vim weechat ranger"
+# pacman -s vim weechat ranger cmus i3 rxvt-unicode artwiz-fonts "
 
 dir=$(pwd)	# saving pwd in var 'dir'
 cd			# change directory to home
@@ -98,6 +98,38 @@ install_cmus() {
 	echo "cmus, yeaaa"
 }
 
+install_i3() {
+	# Checking i3 config , creating symlink
+	if [ -h .i3/config ]
+	then
+		echo "i3config is already a symlink!"
+	elif [ -f .i3/config ]
+	then 
+		# config found, creating backup"
+		mv .i3/config .i3/config.backup
+	else
+		# Creating new config
+		echo "creating i3config symlinks"
+		ln -s $dir/i3/config ~/.i3/config
+	fi
+	echo "i3 config done."
+
+	# Checking i3status.conf, creating symlink
+	if [ -h .i3status.conf ]
+	then
+		echo "i3status.conf is already a symlink!"
+	elif [ -f .i3status.conf ]
+	then 
+		# config found, creating backup"
+		mv .i3status.conf .i3status.conf.backup
+	else
+		# Creating new config
+		echo "creating i3status.conf symlinks"
+		ln -s $dir/i3/.i3status.conf ~/.i3status.conf
+	fi
+	echo "i3status.conf done."
+}
+
 install_xdefaults() {
 
 	# Checking Xdefaults, creating symlink
@@ -116,9 +148,12 @@ install_xdefaults() {
 }
 
 # lets execute the functions yay! 'Ö' 
-install_vimconf
-install_weechat
-start_vim
+#install_vimconf
+#install_weechat
 #install_ranger
 #install_cmus
 #install_xdefaults
+#install_i3
+
+# starting vim must be the last option!
+#start_vim
