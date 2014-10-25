@@ -121,6 +121,7 @@ endfunction
 " easier buffer moving with <leader>b / <leader>n  
 noremap <leader>b :bprevious<CR>
 noremap <leader>n :bnext<CR>
+noremap <leader>/ :nohl<CR>
 
 
 """ Plugin Settings
