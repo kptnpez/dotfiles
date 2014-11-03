@@ -9,6 +9,14 @@ Plugin 'gmarik/Vundle.vim'
 
 " My Plugins
 
+" Snipmate Plugins
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+	" Optional Snippets
+Plugin 'honza/vim-snippets'
+
+
 " A pretty statusline, bufferline integration
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-bufferline'
