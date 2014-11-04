@@ -186,7 +186,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 		position		top
-		font pango:		cure,Icons 8	
+		#font pango:		SourceCodePro,Icons 8
+		font pango:		Gohufont,Icons 11
+		#font pango:		AnonymousPro,Icons 9
 		colors {
 			background #1f1f22 
 			statusline #f3f3f3
