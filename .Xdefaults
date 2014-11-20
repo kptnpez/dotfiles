@@ -9,8 +9,13 @@
 !urxvt*font: xft:AnonymousPro:size=8:antialias=true
 !urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
 
-urxvt*font: xft:Gohufont:size=11:antialias=true
-urxvt*boldFont: xft:Gohufont:size=11:antialias=true
+URxvt*font: xft:Profont:style=Regular:size=8:antialias=false
+URxvt*boldFont: xft:Profont:style=Regular:size=8:antialias=false
+URxvt*italicFont: xft:Profont:style=Regular:size=8:antialias=false URxvt*bolditalicfont: xft:Profont:style=Regular:size=8:antialias=false
+
+
+!urxvt*font: xft:Gohufont:size=11:antialias=true
+!urxvt*boldFont: xft:Gohufont:size=11:antialias=true
 !urxvt*font: xft:SourceCodePro:size=10:antialias=true
 !urxvt*boldFont: xft:SourceCodePro:size=10:antialias=true
 
@@ -47,7 +52,8 @@ URxvt.urlLauncher:          x-www-browser
 !URL Support 
 URxvt.perl-ext:			default,url-select
 URxvt.keysym.M-u:		perl:url-select:select_next
-URxvt.url-select.launcher:	/usr/bin/chromium -new-tab
+!URxvt.url-select.launcher:	/usr/bin/chromium -new-tab
+URxvt.url-select.launcher:	/usr/bin/firefox -new-tab
 URxvt.url-select.underline:	true
 
 ! TABS SETTINGS
