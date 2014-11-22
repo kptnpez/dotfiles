@@ -133,6 +133,11 @@ noremap <leader>/ :nohl<CR>
 
 
 """ Plugin Settings
+
+"		Easymotion
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
 "		Lightline
 let g:lightline = {
 			\ 'colorscheme': 'powerline'
