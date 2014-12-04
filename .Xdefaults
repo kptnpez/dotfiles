@@ -6,13 +6,12 @@
 
 
 ! FONTS
-!urxvt*font: xft:AnonymousPro:size=8:antialias=true
-!urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
+urxvt*font: xft:AnonymousPro:size=8:antialias=true
+urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
 
-URxvt*font: xft:Profont:style=Regular:size=8:antialias=false
-URxvt*boldFont: xft:Profont:style=Regular:size=8:antialias=false
-URxvt*italicFont: xft:Profont:style=Regular:size=8:antialias=false URxvt*bolditalicfont: xft:Profont:style=Regular:size=8:antialias=false
-
+!URxvt*font: xft:Profont:style=Regular:size=11:antialias=false
+!URxvt*boldFont: xft:Profont:style=Regular:size=11:antialias=false
+!URxvt*italicFont: xft:Profont:style=Regular:size=11:antialias=false URxvt*bolditalicfont: xft:Profont:style=Regular:size=11:antialias=false
 
 !urxvt*font: xft:Gohufont:size=11:antialias=true
 !urxvt*boldFont: xft:Gohufont:size=11:antialias=true
