@@ -42,6 +42,13 @@ Plugin 'takac/vim-hardtime'
 " Handlebar Syntax etc. (used for ghost)
 Plugin 'mustache/vim-mustache-handlebars'
 
+" LOLCODE SUPPORT
+" Plugin 'Xe/lolcode.vim'
+
+" i3-vim-syntax
+Plugin 'PotatoesMaster/i3-vim-syntax'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()			"required
 filetype plugin indent on	"required
