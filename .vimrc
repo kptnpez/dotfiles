@@ -48,6 +48,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 " i3-vim-syntax
 Plugin 'PotatoesMaster/i3-vim-syntax'
 
+" Zencoding for vim x3 
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()			"required
