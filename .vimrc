@@ -16,7 +16,6 @@ Plugin 'garbas/vim-snipmate'
 	" Optional Snippets
 Plugin 'honza/vim-snippets'
 
-
 " A pretty statusline, bufferline integration
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-bufferline'
@@ -26,9 +25,9 @@ Plugin 'kien/ctrlp.vim'
 
 " Glorious Colorschemes
 Plugin 'tomasr/molokai'
-Plugin 'sickill/vim-monokai'
-Plugin 'whatyouhide/vim-gotham'
-Plugin 'nanotech/jellybeans.vim'
+"Plugin 'sickill/vim-monokai'
+"Plugin 'whatyouhide/vim-gotham'
+"Plugin 'nanotech/jellybeans.vim'
 
 " Easy...motions..yeah.
 Plugin 'Lokaltog/vim-easymotion'
@@ -40,7 +39,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'takac/vim-hardtime'
 
 " Handlebar Syntax etc. (used for ghost)
-Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'mustache/vim-mustache-handlebars'
 
 " LOLCODE SUPPORT
 " Plugin 'Xe/lolcode.vim'
@@ -49,7 +48,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 
 " Zencoding for vim x3 
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()			"required
@@ -158,6 +157,7 @@ let g:lightline = {
 let g:ctrlp_reuse_window = 'startify' "dont split in startify
 let g:startify_bookmarks = [
 			\ $HOME . "/.vimrc", 
+			\ $HOME . "/.i3/config", 
 			\ ]
 let g:startify_custom_header = [
 			\ '	Author:		pez',

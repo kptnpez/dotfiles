@@ -26,11 +26,12 @@ install_vimconf() {
 	if [ -h .vimrc ]
 	then
 		echo ".vimrc is already a symlink!"
-	elif [ -f .vimrc ]
-	then 
-		# .vimrc found, creating backup"
-		mv .vimrc .vimrc.backup
-	else
+	else 
+		if [ -f .vimrc ]
+		then 
+			# .vimrc found, creating backup"
+			mv .vimrc .vimrc.backup
+		fi
 		# Creating new .vimrc
 		echo "creating vim symlinks"
 		ln -s $dir/.vimrc ~/.vimrc
@@ -38,6 +39,8 @@ install_vimconf() {
 
 	echo "-----------------------------------------"
 	read -p  "vim configs copied, press any key to continue"
+
+	start_vim
 }
 
 start_vim() {
@@ -52,20 +55,17 @@ start_vim() {
 }
 
 install_weechat() {
-	if [ -h .weechat/weechat.conf ]
-	then
-		echo "weechcat.conf is already a symlink!"
-	elif [ -f .weechat/weechat.conf ]
+	if [ -f .weechat/weechat.conf ]
 	then 
 		# weechat.conf found, creating backup"
 		mv .weechat/weechat.conf .weechat/weechat.conf.backup
-	else
-		# Creating new .weechat.conf
-		if [ ! -h .weechat/weechat.conf ] && [ ! -f .weechat/weechat.conf ]
-		then
-			echo "creating symlink for weechat.conf"
-			ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
-		fi
+	fi
+	# Creating new .weechat.conf
+
+	if [ ! -h .weechat/weechat.conf ] 
+	then
+		echo "creating symlink for weechat.conf"
+		ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
 	fi
 
 	i=0	
@@ -90,27 +90,20 @@ install_weechat() {
 	
 }
 
-install_ranger() {
-	echo "Ranger! wuhu :)" 
-}
-
-install_cmus() {
-	echo "cmus, yeaaa"
-}
-
 install_i3() {
 	# Checking i3 config , creating symlink
 	if [ -h .i3/config ]
 	then
 		echo "i3config is already a symlink!"
-	elif [ -f .i3/config ]
-	then 
-		# config found, creating backup"
-		mv .i3/config .i3/config.backup
-	else
-		# Creating new config
-		echo "creating i3config symlinks"
-		ln -s $dir/i3/config ~/.i3/config
+	else 
+		if [ -f .i3/config ]
+		then 
+			# config found, creating backup"
+			mv .i3/config .i3/config.backup
+		fi
+			# Creating new config
+			echo "creating i3config symlinks"
+			ln -s $dir/i3/config ~/.i3/config
 	fi
 	echo "i3 config done."
 
@@ -118,11 +111,12 @@ install_i3() {
 	if [ -h .i3status.conf ]
 	then
 		echo "i3status.conf is already a symlink!"
-	elif [ -f .i3status.conf ]
-	then 
-		# config found, creating backup"
-		mv .i3status.conf .i3status.conf.backup
 	else
+		if [ -f .i3status.conf ]
+		then 
+			# config found, creating backup"
+			mv .i3status.conf .i3status.conf.backup
+		fi
 		# Creating new config
 		echo "creating i3status.conf symlinks"
 		ln -s $dir/i3/.i3status.conf ~/.i3status.conf
@@ -136,11 +130,12 @@ install_xdefaults() {
 	if [ -h .Xdefaults ]
 	then
 		echo ".Xdefaults is already a symlink!"
-	elif [ -f .Xdefaults ]
-	then 
-		# .Xdefaults found, creating backup"
-		mv .Xdefaults .Xdefaults.backup
 	else
+		if [ -f .Xdefaults ]
+		then 
+			# .Xdefaults found, creating backup"
+			mv .Xdefaults .Xdefaults.backup
+		fi
 		# Creating new .Xdefaults
 		echo "creating Xdefault symlinks"
 		ln -s $dir/.Xdefaults ~/.Xdefaults
@@ -152,24 +147,21 @@ create() {
 	if [ -h $1 ]
 	then
 		echo "$1 is already a symlink!"
-	elif [ -f $1 ]
-	then 
-		# config found, creating backup"
-		mv $1 $1.backup
-	else
+	else 
+		if [ -f $1 ]
+		then 
+			# config found, creating backup"
+			mv $1 $1.backup
+		fi
 		# Creating new config
 		echo "creating $1 symlinks"
 		ln -s $dir/i3/.$1 ~/.i3status.conf
 	fi
 	echo "$1 done."
 }
+
 # lets execute the functions yay! 'Ö' 
-#install_vimconf
 #install_weechat
-#install_ranger
-#install_cmus
 #install_xdefaults
 #install_i3
-
-# starting vim must be the last option!
-#start_vim
+#install_vimconf
