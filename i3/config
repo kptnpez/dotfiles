@@ -133,10 +133,10 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
-# OWN KEYBINDINGS
+################################## OWN KEYBINDING ###########################
 # bindsym $mod+p exec --no-startup-id i3-input -F 'exec %s' -P 'execute: '
-bindsym $mod+x exec "oblogout"
-bindsym $mod+Shift+t border toggle
+# bindsym $mod+x exec "oblogout"
+# bindsym $mod+Shift+t border toggle
 
 # Media Keys
 bindsym XF86AudioRaiseVolume exec "amixer -c1 set Master 5%+"
@@ -148,6 +148,22 @@ bindsym XF86MonBrightnessDown exec "xbacklight -10"
 new_window 1pixel
 for_window [class="^.*"] border pixel 1
 for_window [title="^float$"] floating enable 
+
+# Power control script - a useful replacement for the normal i3 exiting keybind.
+# https://wiki.archlinux.org/index.php/i3#Shutdown.2C_reboot.2C_lock_screen
+set $mode_system System (1) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (d) shutdown
+mode "$mode_system" {
+bindsym 1 exec --no-startup-id ~/.i3/i3exit lock, mode "default"
+bindsym e exec --no-startup-id ~/.i3/i3exit logout, mode "default"
+bindsym s exec --no-startup-id ~/.i3/i3exit suspend, mode "default"
+bindsym h exec --no-startup-id ~/.i3/i3exit hibernate, mode "default"
+bindsym r exec --no-startup-id ~/.i3/i3exit reboot, mode "default"
+bindsym d exec --no-startup-id ~/.i3/i3exit shutdown, mode "default"
+# back to normal: Enter or Escape
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+bindsym $mod+x mode "$mode_system"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
