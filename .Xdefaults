@@ -34,6 +34,7 @@ URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
 ! URxvt.color1  : #000000
 
 ! SETTINGS
+URxvt*urgentOnBell: True
 URxvt*scrollBar: False
 ! URxvt*scrollColor: #8FF528
 ! URxvt*troughColor: #222222
@@ -56,7 +57,8 @@ URxvt.urlLauncher:          x-www-browser
 URxvt.perl-ext:			default,url-select
 URxvt.keysym.M-u:		perl:url-select:select_next
 !URxvt.url-select.launcher:	/usr/bin/chromium -new-tab
-URxvt.url-select.launcher:	/usr/bin/firefox -new-tab
+!URxvt.url-select.launcher:	/usr/bin/firefox -new-tab
+URxvt.url-select.launcher:	/usr/bin/firedev -new-tab
 URxvt.url-select.underline:	true
 
 ! TABS SETTINGS
