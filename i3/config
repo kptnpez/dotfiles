@@ -57,8 +57,10 @@ set $ws8  "8: 8"
 set $ws9  "9:"
 set $ws10 "10:"
 
-set $default_gaps_inner 9
-set $default_gaps_outer 3
+#set $default_gaps_inner 9
+#set $default_gaps_outer 3
+set $default_gaps_inner 15
+set $default_gaps_outer 10
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 force_display_urgency_hint 0 ms
@@ -85,7 +87,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+m exec dmenu_run -i -p "Search:" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime"
+bindsym $mod+m exec dmenu_run -i -p "%" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime"
 bindsym $mod+d exec dmenu_run -i -p "Search:" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime"
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -p "Search:" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime"'
 
@@ -238,6 +240,7 @@ bindsym $mod+r mode "resize"
 #}
 
 bar {
+		mode hide
         status_command i3status 
         position top
         font pango:Profont, Icons 8
