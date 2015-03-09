@@ -9,38 +9,22 @@
 
 dir=$(pwd)	# saving pwd in var 'dir'
 cd			# change directory to home
-plugin_dir=$dir/weechat/plugins # saving plugin folder
+plugin_dir=$dir/.weechat/plugins # saving plugin folder
 
-install_vimconf() {
-
-	# installing vundle for vim
-	if [ ! -d ~/.vim/bundle/Vundle.vim ]
+create() {
+	# Checking for file, creating symlink
+	if [ -h $1 ] # is file symlink?
 	then
-		echo "Installing Vundle"
-		git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	else
-		echo "Vundle already exists."
-	fi
-
-	# Checking Vimrc, creating symlink
-	if [ -h .vimrc ]
-	then
-		echo ".vimrc is already a symlink!"
+		echo "$1 is already a symlink!"
 	else 
-		if [ -f .vimrc ]
+		if [ -f $1 ] # does file exist?
 		then 
-			# .vimrc found, creating backup"
-			mv .vimrc .vimrc.backup
+			mv $1 $1.backup # create a backup
 		fi
-		# Creating new .vimrc
-		echo "creating vim symlinks"
-		ln -s $dir/.vimrc ~/.vimrc
+		echo "creating symlinks for $1"
+		ln -s $dir/$1 $2 
 	fi
-
-	echo "-----------------------------------------"
-	read -p  "vim configs copied, press any key to continue"
-
-	start_vim
+	echo "$1 done."
 }
 
 start_vim() {
@@ -54,19 +38,27 @@ start_vim() {
 	vim
 }
 
-install_weechat() {
-	if [ -f .weechat/weechat.conf ]
-	then 
-		# weechat.conf found, creating backup"
-		mv .weechat/weechat.conf .weechat/weechat.conf.backup
-	fi
-	# Creating new .weechat.conf
+install_vimconf() {
 
-	if [ ! -h .weechat/weechat.conf ] 
+	# installing vundle for vim
+	if [ ! -d ~/.vim/bundle/Vundle.vim ]
 	then
-		echo "creating symlink for weechat.conf"
-		ln -s $dir/weechat/weechat.conf ~/.weechat/weechat.conf
+		echo "Installing Vundle"
+		git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	else
+		echo "Vundle already exists."
 	fi
+
+	create .vimrc ~/.vimrc
+
+	echo "--------------------------------------------"
+	read -p  "vim configs completly copied, press any key to continue"
+	start_vim
+}
+
+install_weechat() {
+
+	create .weechat/weechat.conf ~/.weechat/weechat.conf
 
 	i=0	
 	cd $plugin_dir #switching to plugin dir
@@ -86,82 +78,20 @@ install_weechat() {
 	done
 	
 	echo "-----------------------------------------"
-	read -p "weechat configs copied, press any key to continue"
+	read -p "weechat plugins copied, press any key to continue"
 	
 }
 
 install_i3() {
-	# Checking i3 config , creating symlink
-	if [ -h .i3/config ]
-	then
-		echo "i3config is already a symlink!"
-	else 
-		if [ -f .i3/config ]
-		then 
-			# config found, creating backup"
-			mv .i3/config .i3/config.backup
-		fi
-			# Creating new config
-			echo "creating i3config symlinks"
-			ln -s $dir/i3/config ~/.i3/config
-	fi
-	echo "i3 config done."
-
-	# Checking i3status.conf, creating symlink
-	if [ -h .i3status.conf ]
-	then
-		echo "i3status.conf is already a symlink!"
-	else
-		if [ -f .i3status.conf ]
-		then 
-			# config found, creating backup"
-			mv .i3status.conf .i3status.conf.backup
-		fi
-		# Creating new config
-		echo "creating i3status.conf symlinks"
-		ln -s $dir/i3/.i3status.conf ~/.i3status.conf
-	fi
-	echo "i3status.conf done."
+	create .i3/config ~/.i3/config
+	create .i3status.conf ~/.i3status.conf
 }
 
 install_xdefaults() {
-
-	# Checking Xdefaults, creating symlink
-	if [ -h .Xdefaults ]
-	then
-		echo ".Xdefaults is already a symlink!"
-	else
-		if [ -f .Xdefaults ]
-		then 
-			# .Xdefaults found, creating backup"
-			mv .Xdefaults .Xdefaults.backup
-		fi
-		# Creating new .Xdefaults
-		echo "creating Xdefault symlinks"
-		ln -s $dir/.Xdefaults ~/.Xdefaults
-	fi
+	create .Xdefaults ~/.Xdefaults
 }
 
-create() {
-	# Checking for file, creating symlink
-	if [ -h $1 ]
-	then
-		echo "$1 is already a symlink!"
-	else 
-		if [ -f $1 ]
-		then 
-			# config found, creating backup"
-			mv $1 $1.backup
-		fi
-		# Creating new config
-		echo "creating $1 symlinks"
-		ln -s $dir/i3/.$1 ~/.i3status.conf
-	fi
-	echo "$1 done."
-}
-
-# lets execute the functions yay! 'Ö' 
-#install_weechat
+install_weechat
 #install_xdefaults
-#install_i3
+install_i3
 #install_vimconf
