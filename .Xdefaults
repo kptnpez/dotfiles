@@ -4,6 +4,8 @@
 !#include "/home/pez/dotfiles/colors/gotham"
 !#include "/home/pez/dotfiles/colors/hybrid"
 !#include "/home/pez/dotfiles/colors/earthy"
+!#include "/home/pez/dotfiles/colors/tronlike"
+!#include "/home/pez/dotfiles/colors/candycolors"
 
 
 ! FONTS
