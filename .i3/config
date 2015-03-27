@@ -240,7 +240,7 @@ bindsym $mod+r mode "resize"
 #}
 
 bar {
-		mode hide
+		#mode hide
         status_command i3status 
         position top
         font pango:Profont, Icons 8
