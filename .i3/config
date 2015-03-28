@@ -139,6 +139,7 @@ bindsym $mod+Shift+a focus child
 # bindsym $mod+p exec --no-startup-id i3-input -F 'exec %s' -P 'execute: '
 # bindsym $mod+x exec "oblogout"
 # bindsym $mod+Shift+t border toggle
+bindsym F12 exec scrot -e 'mv $f ~/Documents/'
 
 # Media Keys
 bindsym XF86AudioRaiseVolume exec "amixer -c1 set Master 5%+"
