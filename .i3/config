@@ -24,7 +24,7 @@ set $darkTurq	#2E3436
 #client.focused_inactive $darkBlue		$darkBlue	$midGray	$nearlyBlk
 #client.unfocused		$notsoBlk		$darkBlue	$midGray	$notsoBlk
 #client.urgent			$highGray		$darkBlue	$darkTurq	$highGray
-#client.background		#161616
+client.background		#161616
 #hide_edge_borders none
 
 #                       BORDER     BACKGROUND TEXT   INDICATOR
@@ -76,6 +76,10 @@ for_window [class="Oblogout"] floating enable
 # Set background
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id synclient touchpadoff=1
+
+#### Restore Layout 
+#exec --no-startup-id "i3-msg 'workspace 2:; append_layout /home/pez/.i3/workspace-2.json'"
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -244,13 +248,15 @@ bar {
 		#mode hide
         status_command i3status 
         position top
-        font pango:Profont, Icons 8
+        font pango:berry, Icons 8
+        #font pango:Inconsolata, Icons 10
         strip_workspace_numbers yes
         height 20
         colors {
                 statusline         $lightgray
                 background         $blue
-                separator          $lime
+               #separator          $lime
+                separator          $darklime
 
 #                                  BORDER     BACKGROUND TEXT
                 focused_workspace  $lightblue $lightblue $lime 
