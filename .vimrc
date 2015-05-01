@@ -35,18 +35,22 @@ Plugin 'Lokaltog/vim-easymotion'
 " A fancy start screen, shows MRU etc.
 Plugin 'mhinz/vim-startify'
 
-" Vim Hardtime
-Plugin 'takac/vim-hardtime'
-
-" Handlebar Syntax etc. (used for ghost)
-"Plugin 'mustache/vim-mustache-handlebars'
-
-" LOLCODE SUPPORT
-" Plugin 'Xe/lolcode.vim'
-
 " i3-vim-syntax
 Plugin 'PotatoesMaster/i3-vim-syntax'
 
+" Goyo - Distraction Free Coding please
+Plugin 'junegunn/goyo.vim'
+
+" Limelight - hyperfocus enabled! 
+Plugin 'junegunn/limelight.vim'
+
+" ---- UNUSED PLUGINS ---- "
+" Vim Hardtime
+" Plugin 'takac/vim-hardtime'
+" Handlebar Syntax etc. (used for ghost)
+"Plugin 'mustache/vim-mustache-handlebars'
+" LOLCODE SUPPORT
+" Plugin 'Xe/lolcode.vim'
 " Zencoding for vim x3 
 "Plugin 'mattn/emmet-vim'
 
@@ -143,6 +147,11 @@ noremap <leader>/ :nohl<CR>
 
 
 """ Plugin Settings
+
+"		Goyo and Limelight
+nnoremap <leader>g :Goyo
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
 
 "		Easymotion
 map / <Plug>(easymotion-sn)
