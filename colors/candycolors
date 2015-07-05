@@ -1,5 +1,9 @@
-URxvt*foreground: #FFFFFF
-URxvt*background: #111111
+!URxvt*foreground: #FFFFFF
+!URxvt*background: #111111
+
+URxvt*foreground: #D3D3D3
+URxvt*background: [95]#111111
+
 !black
 URxvt*color0: #242424
 URxvt*color8: #474747

@@ -16,6 +16,9 @@ Plugin 'garbas/vim-snipmate'
 	" Optional Snippets
 Plugin 'honza/vim-snippets'
 
+" Latex Support
+" Plugin 'lervag/vimtex'
+
 " A pretty statusline, bufferline integration
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-bufferline'
@@ -25,6 +28,7 @@ Plugin 'kien/ctrlp.vim'
 
 " Glorious Colorschemes
 Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/summerfruit256.vim'
 "Plugin 'sickill/vim-monokai'
 "Plugin 'whatyouhide/vim-gotham'
 "Plugin 'nanotech/jellybeans.vim'

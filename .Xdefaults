@@ -6,9 +6,10 @@
 !#include "/home/pez/dotfiles/colors/earthy"
 !#include "/home/pez/dotfiles/colors/tronlike"
 !#include "/home/pez/dotfiles/colors/candycolors"
+!#include "/home/pez/dotfiles/colors/ocean"
 
+! ------ Fonts ------!
 
-! FONTS
 !urxvt*font: xft:AnonymousPro:size=8:antialias=true
 !urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
 
@@ -20,21 +21,20 @@
 !urxvt*font: xft:tewi:size=8:antialias=true
 !urxvt*boldFont: xft:tewi:size=8:antialias=true
 
-
 !urxvt*font: xft:Fantasque Sans Mono:weight=medium:size=10:antialias=true
 !urxvt*boldFont: xft:Fantasque Sans Mono:weight=medium:size=10:antialias=true
 
 !urxvt*font: xft:Fantasque Sans Mono:weight=medium:size=12:antialias=true
 !urxvt*boldFont: xft:Fantasque Sans Mono:weight=medium:size=12:antialias=true
 
-!urxvt*font: xft:Inconsolata:size=10:antialias=true
-!urxvt*boldFont: xft:Inconsolata:size=10:antialias=true
+urxvt*font: xft:Inconsolata:size=10:antialias=true
+urxvt*boldFont: xft:Inconsolata:size=10:antialias=true
 
 !urxvt*font: xft:Inconsolata:size=12:antialias=true
 !urxvt*boldFont: xft:Inconsolata:size=12:antialias=true
 
-URxvt*font: xft:berry:style=Regular:size=9:antialias=false
-URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
+!URxvt*font: xft:berry:style=Regular:size=9:antialias=false
+!URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
 
 !URxvt*font: xft:Profont:style=Regular:size=9:antialias=false
 !URxvt*boldFont: xft:Profont:style=Regular:size=9:antialias=false
@@ -53,7 +53,7 @@ URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
 !urxvt*font: xft:cure:size=8:antialias=true
 !urxvt*boldFont: xft:cure:size=8:antialias=true
 
-
+! ------ general Settings ------!
 ! TABS COLOURS
 ! URxvt.color0  : #979797
 ! URxvt.color1  : #000000
@@ -61,8 +61,6 @@ URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
 ! SETTINGS
 URxvt*urgentOnBell: True
 URxvt*scrollBar: False
-! URxvt*scrollColor: #8FF528
-! URxvt*troughColor: #222222
 URxvt*secondaryScroll: True
 URxvt*saveLines: 1000
 URxvt*geometry: 78x24
@@ -70,6 +68,8 @@ URxvt.cursorUnderline: False
 URxvt.cursorBlink: True
 URxvt*underlineColor: #181818
 ! URxvt*depth: 32
+! URxvt*scrollColor: #8FF528
+! URxvt*troughColor: #222222
 ! URxvt*transparent: True
 ! URxvt*borderColor: #C2FFA0
 
@@ -82,8 +82,8 @@ URxvt.urlLauncher:          x-www-browser
 URxvt.perl-ext:			default,url-select
 URxvt.keysym.M-u:		perl:url-select:select_next
 !URxvt.url-select.launcher:	/usr/bin/chromium -new-tab
-!URxvt.url-select.launcher:	/usr/bin/firefox -new-tab
-URxvt.url-select.launcher:	/usr/bin/firedev -new-tab
+URxvt.url-select.launcher:	/usr/bin/firefox -new-tab
+!URxvt.url-select.launcher:	/usr/bin/firedev -new-tab
 URxvt.url-select.underline:	true
 
 ! TABS SETTINGS
