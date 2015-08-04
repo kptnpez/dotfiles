@@ -47,15 +47,19 @@ client.urgent           $urgentred $urgentred $white $urgentred
 
 set $ws1  "1:"
 set $ws2  "2:"
-set $ws3  "3:"
-#set $ws4  "4:"
-set $ws4  "4:"
+set $ws3  "3:ƀ"
+#set $ws3  "3:"
+##set $ws4  "4:"
+set $ws4  "4:Ƅ"
+#set $ws4  "4:"
 set $ws5  "5:"
 set $ws6  "6:"
 set $ws7  "7:"
 set $ws8  "8: 8"
 set $ws9  "9:"
 set $ws10 "10:"
+
+   #names = { "ƀ", "Ƅ", "Ɗ", "ƈ", "ƙ" },
 
 #set $default_gaps_inner 9
 #set $default_gaps_outer 3
@@ -77,6 +81,8 @@ for_window [class="Oblogout"] floating enable
 
 # Set background
 exec --no-startup-id nitrogen --restore
+# exec --no-startup-id xset -b
+# exec --no-startup-id setxkbmap de
 exec --no-startup-id synclient touchpadoff=1
 
 #### Restore Layout 
@@ -250,7 +256,8 @@ bar {
 		#mode hide
         status_command i3status 
         position top
-        font pango:berry, Icons 8
+        font pango:berry 8, Icons 8
+        #font pango:berry, Icons 8
         #font pango:Inconsolata, Icons 10
         strip_workspace_numbers yes
         height 20

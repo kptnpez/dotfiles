@@ -1,57 +1,5 @@
-#include "/home/pez/dotfiles/colors/monokai"
-!#include "/home/pez/dotfiles/colors/autumn"
-!#include "/home/pez/dotfiles/colors/mono-blue"
-!#include "/home/pez/dotfiles/colors/gotham"
-!#include "/home/pez/dotfiles/colors/hybrid"
-!#include "/home/pez/dotfiles/colors/earthy"
-!#include "/home/pez/dotfiles/colors/tronlike"
-!#include "/home/pez/dotfiles/colors/candycolors"
-!#include "/home/pez/dotfiles/colors/ocean"
-
-! ------ Fonts ------!
-
-!urxvt*font: xft:AnonymousPro:size=8:antialias=true
-!urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
-
-!urxvt*font: xft:ohsnap:size=8:antialias=true
-!urxvt*boldFont: xft:ohsnap:size=8:antialias=true
-!urxvt*font: xft:ohsnap:size=12:antialias=true
-!urxvt*boldFont: xft:ohsnap:size=12:antialias=true
-
-!urxvt*font: xft:tewi:size=8:antialias=true
-!urxvt*boldFont: xft:tewi:size=8:antialias=true
-
-!urxvt*font: xft:Fantasque Sans Mono:weight=medium:size=10:antialias=true
-!urxvt*boldFont: xft:Fantasque Sans Mono:weight=medium:size=10:antialias=true
-
-!urxvt*font: xft:Fantasque Sans Mono:weight=medium:size=12:antialias=true
-!urxvt*boldFont: xft:Fantasque Sans Mono:weight=medium:size=12:antialias=true
-
-urxvt*font: xft:Inconsolata:size=10:antialias=true
-urxvt*boldFont: xft:Inconsolata:size=10:antialias=true
-
-!urxvt*font: xft:Inconsolata:size=12:antialias=true
-!urxvt*boldFont: xft:Inconsolata:size=12:antialias=true
-
-!URxvt*font: xft:berry:style=Regular:size=9:antialias=false
-!URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
-
-!URxvt*font: xft:Profont:style=Regular:size=9:antialias=false
-!URxvt*boldFont: xft:Profont:style=Regular:size=9:antialias=false
-!URxvt*italicFont: xft:Profont:style=Regular:size=11:antialias=false
-!URxvt*bolditalicfont: xft:Profont:style=Regular:size=11:antialias=false
-
-!urxvt*font: xft:Gohufont:size=11:antialias=true
-!urxvt*boldFont: xft:Gohufont:size=11:antialias=true
-
-!urxvt*font: xft:SourceCodePro:size=10:antialias=true
-!urxvt*boldFont: xft:SourceCodePro:size=10:antialias=true
-
-!urxvt*font: xft:Hermit:size=9:antialias=true
-!urxvt*boldFont: xft:Hermit:size=9:antialias=true
-
-!urxvt*font: xft:cure:size=8:antialias=true
-!urxvt*boldFont: xft:cure:size=8:antialias=true
+#include "/home/pez/dotfiles/colors/colors"
+#include "/home/pez/dotfiles/fonts"
 
 ! ------ general Settings ------!
 ! TABS COLOURS
