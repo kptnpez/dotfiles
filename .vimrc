@@ -107,6 +107,8 @@ set shiftwidth=4								" default 8
 set softtabstop=4								" 'tab' feels like <tab>
 set tabstop=4									" replace <TAB> w/4 spaces
 
+set fillchars+=vert:│							" Set Fillchars :)
+
 "only auto-comment newline for block comments
 au FileType c,cpp setlocal comments -=:// comments +=f://
 
