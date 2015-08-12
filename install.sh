@@ -93,5 +93,5 @@ install_xdefaults() {
 
 install_weechat
 #install_xdefaults
-install_i3
+#install_i3
 #install_vimconf

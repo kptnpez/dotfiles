@@ -2,9 +2,6 @@
 #include "/home/pez/dotfiles/fonts"
 
 ! ------ general Settings ------!
-! TABS COLOURS
-! URxvt.color0  : #979797
-! URxvt.color1  : #000000
 
 ! SETTINGS
 URxvt*urgentOnBell: True
@@ -15,27 +12,9 @@ URxvt*geometry: 78x24
 URxvt.cursorUnderline: False
 URxvt.cursorBlink: True
 URxvt*underlineColor: #181818
-! URxvt*depth: 32
-! URxvt*scrollColor: #8FF528
-! URxvt*troughColor: #222222
-! URxvt*transparent: True
-! URxvt*borderColor: #C2FFA0
-
-! CLICKABLE LINKS
-URxvt.perl-ext-common:      default,matcher
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          x-www-browser
 
 !URL Support 
 URxvt.perl-ext:			default,url-select
 URxvt.keysym.M-u:		perl:url-select:select_next
-!URxvt.url-select.launcher:	/usr/bin/chromium -new-tab
 URxvt.url-select.launcher:	/usr/bin/firefox -new-tab
-!URxvt.url-select.launcher:	/usr/bin/firedev -new-tab
 URxvt.url-select.underline:	true
-
-! TABS SETTINGS
-! URxvt.tabbed.tabbar-fg: 1
-! URxvt.tabbed.tabbar-bg: 0
-! URxvt.tabbed.tab-fg:    1
-! URxvt.tabbed.tab-bg:    0
