@@ -130,6 +130,14 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
+" Add brackets automatically
+:inoremap ( ()<Esc>i
+:inoremap [ []<Esc>i
+:inoremap { {}<Esc>i
+
+" .. and escape them with jj 
+:inoremap jj <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
 " Exit insert mode with jk
 imap jk <Esc>
 " Disable annoying ex mode (Q)
