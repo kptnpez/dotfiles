@@ -19,6 +19,10 @@ Plugin 'honza/vim-snippets'
 " Latex Support
 " Plugin 'lervag/vimtex'
 
+" Surround!
+Plugin 'tpope/vim-surround'
+Plugin 'ervandew/supertab'
+
 " A pretty statusline, bufferline integration
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-bufferline'
