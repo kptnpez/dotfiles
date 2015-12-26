@@ -35,7 +35,7 @@ Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/summerfruit256.vim'
 "Plugin 'sickill/vim-monokai'
 "Plugin 'whatyouhide/vim-gotham'
-"Plugin 'nanotech/jellybeans.vim'
+Plugin 'nanotech/jellybeans.vim'
 
 " Easy...motions..yeah.
 Plugin 'Lokaltog/vim-easymotion'
@@ -52,6 +52,8 @@ Plugin 'junegunn/goyo.vim'
 " Limelight - hyperfocus enabled! 
 Plugin 'junegunn/limelight.vim'
 
+" Node JS! 
+Plugin 'moll/vim-node'
 " ---- UNUSED PLUGINS ---- "
 " Vim Hardtime
 " Plugin 'takac/vim-hardtime'

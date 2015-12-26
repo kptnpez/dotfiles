@@ -1,7 +1,7 @@
 ! ------ Fonts ------!
 
-!urxvt*font: xft:AnonymousPro:size=8:antialias=true
-!urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
+urxvt*font: xft:AnonymousPro:size=8:antialias=true
+urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
 
 !urxvt*font: xft:ohsnap:size=8:antialias=true
 !urxvt*boldFont: xft:ohsnap:size=8:antialias=true
@@ -23,8 +23,8 @@
 !urxvt*font: xft:Inconsolata:size=12:antialias=true
 !urxvt*boldFont: xft:Inconsolata:size=12:antialias=true
 
-URxvt*font: xft:berry:style=Regular:size=9:antialias=false
-URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
+!URxvt*font: xft:berry:style=Regular:size=9:antialias=false
+!URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
 
 !URxvt*font: xft:Profont:style=Regular:size=9:antialias=false
 !URxvt*boldFont: xft:Profont:style=Regular:size=9:antialias=false

@@ -12,9 +12,16 @@ URxvt*geometry: 78x24
 URxvt.cursorUnderline: False
 URxvt.cursorBlink: True
 URxvt*underlineColor: #181818
+URxvt.letterSpace: -1
 
 !URL Support 
 URxvt.perl-ext:			default,url-select
 URxvt.keysym.M-u:		perl:url-select:select_next
 URxvt.url-select.launcher:	/usr/bin/firefox -new-tab
 URxvt.url-select.underline:	true
+
+!Change Font Size on the  fly
+URxvt.perl-ext-common: resize-font
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+

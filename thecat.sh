@@ -30,7 +30,7 @@ date=$( date "+%a %d %b" )
 OS=$(uname -r -o -m)
 
 # WM version
-AwVer=$(subtle --version | head -1 | cut -d' ' -f2 | sed 's/debian\///g' )
+#AwVer=$(subtle --version | head -1 | cut -d' ' -f2 | sed 's/debian\///g' )
 
 # Other
 UPT=`uptime | awk -F'( |,)' '{print $2}' | awk -F ":" '{print $1}'`
