@@ -12,7 +12,8 @@ URxvt*geometry: 78x24
 URxvt.cursorUnderline: False
 URxvt.cursorBlink: True
 URxvt*underlineColor: #181818
-URxvt.letterSpace: -1
+URxvt.letterSpace: -0
+URxvt.buffered: false
 
 !URL Support 
 URxvt.perl-ext:			default,url-select

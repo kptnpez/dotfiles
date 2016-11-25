@@ -7,6 +7,7 @@
 !#include "/home/pez/dotfiles/colors/tronlike"
 !#include "/home/pez/dotfiles/colors/candycolors"
 !#include "/home/pez/dotfiles/colors/ocean"
+!#include "/home/pez/dotfiles/colors/ocean-dark"
 
 !#include "/home/pez/dotfiles/colors/copycat/blackburn"
 !#include "/home/pez/dotfiles/colors/copycat/copland"

@@ -1,15 +1,18 @@
 ! ------ Fonts ------!
 
-urxvt*font: xft:AnonymousPro:size=8:antialias=true
-urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
+urxvt*font: xft:EnvyPn-12
+urxvt*boldFont: xft:EnvyPn-12
+
+!urxvt*font: xft:AnonymousPro:size=8:antialias=true
+!urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
 
 !urxvt*font: xft:ohsnap:size=8:antialias=true
 !urxvt*boldFont: xft:ohsnap:size=8:antialias=true
 !urxvt*font: xft:ohsnap:size=12:antialias=true
 !urxvt*boldFont: xft:ohsnap:size=12:antialias=true
 
-!urxvt*font: xft:tewi:size=8:antialias=true
-!urxvt*boldFont: xft:tewi:size=8:antialias=true
+!urxvt*font: xft:tewi:size=8:antialias=false
+!urxvt*boldFont: xft:tewi:size=8:antialias=false
 
 !urxvt*font: xft:Fantasque Sans Mono:weight=medium:size=10:antialias=true
 !urxvt*boldFont: xft:Fantasque Sans Mono:weight=medium:size=10:antialias=true

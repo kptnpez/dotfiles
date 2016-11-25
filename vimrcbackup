@@ -19,10 +19,6 @@ Plugin 'honza/vim-snippets'
 " Latex Support
 " Plugin 'lervag/vimtex'
 
-" Surround!
-Plugin 'tpope/vim-surround'
-Plugin 'ervandew/supertab'
-
 " A pretty statusline, bufferline integration
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-bufferline'
@@ -31,13 +27,11 @@ Plugin 'bling/vim-bufferline'
 Plugin 'kien/ctrlp.vim'
 
 " Glorious Colorschemes
-Plugin 'chriskempson/base16-vim'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/summerfruit256.vim'
 "Plugin 'sickill/vim-monokai'
 "Plugin 'whatyouhide/vim-gotham'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'morhetz/gruvbox'
+"Plugin 'nanotech/jellybeans.vim'
 
 " Easy...motions..yeah.
 Plugin 'Lokaltog/vim-easymotion'
@@ -53,12 +47,6 @@ Plugin 'junegunn/goyo.vim'
 
 " Limelight - hyperfocus enabled! 
 Plugin 'junegunn/limelight.vim'
-
-" Node JS! 
-Plugin 'moll/vim-node'
-
-" Markdown Support
-Plugin 'suan/vim-instant-markdown'
 
 " ---- UNUSED PLUGINS ---- "
 " Vim Hardtime
@@ -88,7 +76,6 @@ filetype plugin indent on	"required
 
 set laststatus=2								" might be required for lightline 
 set t_Co=256									" Terminal colors 256, for fancy blingbling
-let base16colorspace=256
 set background=dark								" we're using a dark bg
 set number										" Show numbers
 set cursorline									" Show cursorline
