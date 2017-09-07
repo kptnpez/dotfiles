@@ -83,7 +83,7 @@ install_weechat() {
 }
 
 install_i3() {
-	create .i3/config ~/.i3/config
+	create .i3/config ~/.config/i3/config
 	create .i3status.conf ~/.i3status.conf
 }
 
@@ -91,7 +91,15 @@ install_xdefaults() {
 	create .Xdefaults ~/.Xdefaults
 }
 
-install_weechat
+install_polybar() {
+  # todo: add test if dir already exists
+  mkdir ~/.config/polybar
+	create polybar/config ~/.config/polybar/config
+	create polybar/launch.sh ~/.config/polybar/launch.sh
+}
+
+#install_weechat
 #install_xdefaults
 #install_i3
 #install_vimconf
+install_polybar

@@ -15,5 +15,7 @@
 !#include "/home/pez/dotfiles/colors/copycat/holo"
 !#include "/home/pez/dotfiles/colors/copycat/multicolor"
 !#include "/home/pez/dotfiles/colors/copycat/powerarrow-darker"
-#include "/home/pez/dotfiles/colors/copycat/rainbow"
+!!#include "/home/pez/dotfiles/colors/copycat/rainbow"
 !#include "/home/pez/dotfiles/colors/copycat/steamburn"
+!#include "/home/pez/dotfiles/colors/pezo"
+#include "/home/pez/dotfiles/colors/autobahn"

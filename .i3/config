@@ -1,8 +1,10 @@
 # vim:filetype=i3
 set $mod Mod4
 
-set $lime      #9FBC00
-set $darklime  #505e00
+#set $lime      #9FBC00
+#set $darklime  #505e00
+set $lime      #009BC2
+set $darklime  #004F77
 set $blue      #131D24
 set $lightblue #232D34
 set $lightgray #DDEEDD
@@ -31,8 +33,6 @@ set $urgentred #B33A3A
 
 #set $lime      #fffffffffff
 #set $darklime  #839e6c
-#set $blue      #2f4153
-#set $lightblue #8fa1b3
 #set $lightgray #85939e
 #set $darkgray  #65737e
 #set $white     #c0c5ce
@@ -75,9 +75,9 @@ set $ws10 "10:"
 
 #set $default_gaps_inner 9
 #set $default_gaps_outer 3
-set $default_gaps_inner 0
+set $default_gaps_inner 9
 #	war mal 15
-set $default_gaps_outer 0
+set $default_gaps_outer 3
 #war mal 10
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
@@ -95,7 +95,9 @@ for_window [class="Oblogout"] floating enable
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xset -b
 exec --no-startup-id setxkbmap de
-exec --no-startup-id synclient touchpadoff=1
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/dotfiles/polybar/launch.sh
+#exec --no-startup-id synclient touchpadoff=1
 #exec --no-startup-id compton -c -f -o 1.0 -I 0.1 -O 0.1 -C -z --vsync opengl-swc --unredir-if-possible --paint-on-overlay --backend glx
 
 #### Restore Layout 
@@ -113,8 +115,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+m exec dmenu_run -i -p "%" -nb "$black" -nf "$white" -sb "$purple" -sf "$white"
-bindsym $mod+m exec dmenu_run -i -p "Search:" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime"
-bindsym $mod+d exec dmenu_run -i -p "Search:" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime"
+bindsym $mod+m exec dmenu_run -i -p "Search:" -nb "#222" -nf "#555" -sb "#222" -sf "#dfdfdf" -fn "unifont:size=6:heavy:fontformat=truetype" -h 27 -x 1000 -q -p ">" -w 500
+bindsym $mod+d exec dmenu_run -i -p "Search:" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime" -fn "unifont:size=6:heavy:fontformat=truetype" -h 27 -x 1000 -q -p ">" -w 500
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -p "Search:" -nb "$blue" -nf "$lightgray" -sb "$lightblue" -sf "$lime"'
 
 
@@ -162,15 +164,15 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 ################################## OWN KEYBINDING ###########################
-# bindsym $mod+p exec --no-startup-id i3-input -F 'exec %s' -P 'execute: '
+bindsym $mod+p exec --no-startup-id i3-input -F 'exec %s' -P 'execute: '
 # bindsym $mod+x exec "oblogout"
 # bindsym $mod+Shift+t border toggle
 bindsym F12 exec scrot -e 'mv $f ~/Documents/'
 
 # Media Keys
-bindsym XF86AudioRaiseVolume exec "amixer -c1 set Master 5%+"
-bindsym XF86AudioLowerVolume exec "amixer -c1 set Master 5%-"
-bindsym XF86AudioMute exec "amixer -c1 set Master 0%"
+bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+"
+bindsym XF86AudioLowerVolume exec "amixer set Master 5%-"
+bindsym XF86AudioMute exec "amixer set Master 0%"
 bindsym XF86MonBrightnessUp exec "xbacklight +10"
 bindsym XF86MonBrightnessDown exec "xbacklight -10"
 
@@ -182,12 +184,14 @@ for_window [title="^float$"] floating enable
 # https://wiki.archlinux.org/index.php/i3#Shutdown.2C_reboot.2C_lock_screen
 set $mode_system System (1) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (d) shutdown
 mode "$mode_system" {
-bindsym 1 exec --no-startup-id ~/.i3/i3exit lock, mode "default"
-bindsym e exec --no-startup-id ~/.i3/i3exit logout, mode "default"
-bindsym s exec --no-startup-id ~/.i3/i3exit suspend, mode "default"
-bindsym h exec --no-startup-id ~/.i3/i3exit hibernate, mode "default"
-bindsym r exec --no-startup-id ~/.i3/i3exit reboot, mode "default"
-bindsym d exec --no-startup-id ~/.i3/i3exit shutdown, mode "default"
+bindsym 1 exec --no-startup-id ~/dotfiles/.i3/i3exit lock, mode "default"
+bindsym e exec --no-startup-id ~/dotfiles/.i3/i3exit logout, mode "default"
+bindsym s exec --no-startup-id ~/dotfiles/.i3/i3exit suspend, mode "default"
+bindsym h exec --no-startup-id ~/dotfiles/.i3/i3exit hibernate, mode "default"
+bindsym r exec --no-startup-id ~/dotfiles/.i3/i3exit reboot, mode "default"
+bindsym d exec --no-startup-id systemctl poweroff
+# bindsym d exec --no-startup-id ~/dotfiles/.i3/i3exit shutdown, mode "default"
+
 # back to normal: Enter or Escape
 bindsym Return mode "default"
 bindsym Escape mode "default"
@@ -246,25 +250,25 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-		#mode hide
-        status_command i3status 
-        position top
-        font pango:berry 8, Icons 8
-        strip_workspace_numbers yes
-        height 20
-        colors {
-                statusline         $lightgray
-                background         $blue
-               #separator          $lime
-                separator          $darklime
-
-#                                  BORDER     BACKGROUND TEXT
-                focused_workspace  $lightblue $lightblue $lime 
-                inactive_workspace $blue      $blue      $white
-                urgent_workspace   $urgentred $urgentred $white
-        }
-}
+#bar {
+#		#mode hide
+#        status_command i3status 
+#        position top
+#        font pango:berry 8, Icons 8
+#        strip_workspace_numbers yes
+#        height 20
+#        colors {
+#                statusline         $lightgray
+#                background         $blue
+#               #separator          $lime
+#                separator          $darklime
+#
+##                                  BORDER     BACKGROUND TEXT
+#                focused_workspace  $lightblue $lightblue $lime 
+#                inactive_workspace $blue      $blue      $white
+#                urgent_workspace   $urgentred $urgentred $white
+#        }
+#}
 
 #bar {
 #		#mode hide

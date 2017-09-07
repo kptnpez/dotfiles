@@ -7,8 +7,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" My Plugins
-
+"---------- My Plugins ---------"
 " Snipmate Plugins
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -16,74 +15,46 @@ Plugin 'garbas/vim-snipmate'
 	" Optional Snippets
 Plugin 'honza/vim-snippets'
 
-" Latex Support
-" Plugin 'lervag/vimtex'
-
-" Surround!
+" Nice features
 Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
-
-" A pretty statusline, bufferline integration
-Plugin 'itchyny/lightline.vim'
-Plugin 'bling/vim-bufferline'
-
-" Fuzzy Finder (files, mru, etc)
 Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
 
 " Glorious Colorschemes
-Plugin 'chriskempson/base16-vim'
+Plugin 'whatyouhide/vim-gotham'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/summerfruit256.vim'
-"Plugin 'sickill/vim-monokai'
-"Plugin 'whatyouhide/vim-gotham'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'morhetz/gruvbox'
 
-" Easy...motions..yeah.
-Plugin 'Lokaltog/vim-easymotion'
-
-" A fancy start screen, shows MRU etc.
-Plugin 'mhinz/vim-startify'
-
-" i3-vim-syntax
+" Syntax Plugins
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'moll/vim-node'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'mustache/vim-mustache-handlebars' "Handlebar Syntax
+Plugin 'mattn/emmet-vim' "Zencoding 
+Plugin 'posva/vim-vue'
 
-" Goyo - Distraction Free Coding please
+" Look and Feel
+Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-bufferline'
+Plugin 'mhinz/vim-startify'
 Plugin 'junegunn/goyo.vim'
-
-" Limelight - hyperfocus enabled! 
 Plugin 'junegunn/limelight.vim'
 
-" Node JS! 
-Plugin 'moll/vim-node'
-
-" Markdown Support
-Plugin 'suan/vim-instant-markdown'
-
 " ---- UNUSED PLUGINS ---- "
-" Vim Hardtime
+" Plugin 'lervag/vimtex' 
 " Plugin 'takac/vim-hardtime'
-" Handlebar Syntax etc. (used for ghost)
-"Plugin 'mustache/vim-mustache-handlebars'
-" LOLCODE SUPPORT
 " Plugin 'Xe/lolcode.vim'
-" Zencoding for vim x3 
-"Plugin 'mattn/emmet-vim'
+"Plugin 'chriskempson/base16-vim'
+"Plugin 'sickill/vim-monokai'
 
 " All of your Plugins must be added before the following line
 call vundle#end()			"required
 filetype plugin indent on	"required
 " to ignore plugin indent changes, insted use:
 "filetype plugin on
-
-
-" Vundle commands
-" :PluginList		- Lists configured Plugins
-" :PluginInstall	- installs Plugins; append '!' to update or just :PluginUpdate
-" :PluginSearch foo	- searches for foo; append '!' to refresh local cache
-" :PluginClean		- confirms removal of unused plugins; appen '!' to auto-approv
-"
-" See :h Vundle for more details or wiki for FAQ
 " Put your non Plugin stuff after this line
 
 set laststatus=2								" might be required for lightline 
@@ -116,9 +87,10 @@ set gdefault									" default s//g (global)
 set incsearch									" 'live'-search
 
 set shiftround									" be clever with tabs
-set shiftwidth=4								" default 8
-set softtabstop=4								" 'tab' feels like <tab>
-set tabstop=4									" replace <TAB> w/4 spaces
+set shiftwidth=2								" default 8
+set softtabstop=2								" 'tab' feels like <tab>
+set tabstop=2									" replace <TAB> w/4 spaces
+set expandtab
 
 set fillchars+=vert:│							" Set Fillchars :)
 
@@ -172,8 +144,7 @@ noremap <leader>b :bprevious<CR>
 noremap <leader>n :bnext<CR>
 noremap <leader>/ :nohl<CR>
 
-
-""" Plugin Settings
+"---------- Plugin Settings ----------"
 
 "		Goyo and Limelight
 nnoremap <leader>g :Goyo
@@ -188,16 +159,3 @@ omap / <Plug>(easymotion-tn)
 let g:lightline = {
 			\ 'colorscheme': 'powerline'
 			\ }
-
-"		Startify, the fancy start page
-let g:ctrlp_reuse_window = 'startify' "dont split in startify
-let g:startify_bookmarks = [
-			\ $HOME . "/.vimrc", 
-			\ $HOME . "/.i3/config", 
-			\ ]
-let g:startify_custom_header = [
-			\ '	Author:		pez',
-			\ ' Homepage:	http://kptnpez.de',
-			\ ''
-			\ ]
-

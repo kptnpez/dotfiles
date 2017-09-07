@@ -1,7 +1,11 @@
 ! ------ Fonts ------!
 
-urxvt*font: xft:EnvyPn-12
-urxvt*boldFont: xft:EnvyPn-12
+!URxvt*font:      -*-envypn-medium-*-*-*-15-*-*-*-*-*-*-*
+!URxvt*boldFont:  -*-envypn-medium-*-*-*-15-*-*-*-*-*-*-*
+!urxvt*font: xft:envypn-13:size=10
+!urxvt*boldFont: xft:envypn-13:size=10
+!urxvt*font: xft:EnvyPn-12
+!urxvt*boldFont: xft:EnvyPn-12
 
 !urxvt*font: xft:AnonymousPro:size=8:antialias=true
 !urxvt*boldFont: xft:AnonymousPro:size=8:antialias=true
@@ -26,16 +30,16 @@ urxvt*boldFont: xft:EnvyPn-12
 !urxvt*font: xft:Inconsolata:size=12:antialias=true
 !urxvt*boldFont: xft:Inconsolata:size=12:antialias=true
 
-!URxvt*font: xft:berry:style=Regular:size=9:antialias=false
-!URxvt*boldFont: xft:berry:style=Regular:size=9:antialias=false
+!URxvt*font: xft:berry:style=Regular:size=8:antialias=false
+!URxvt*boldFont: xft:berry:style=Regular:size=8:antialias=false
 
 !URxvt*font: xft:Profont:style=Regular:size=9:antialias=false
 !URxvt*boldFont: xft:Profont:style=Regular:size=9:antialias=false
 !URxvt*italicFont: xft:Profont:style=Regular:size=11:antialias=false
 !URxvt*bolditalicfont: xft:Profont:style=Regular:size=11:antialias=false
 
-!urxvt*font: xft:Gohufont:size=11:antialias=true
-!urxvt*boldFont: xft:Gohufont:size=11:antialias=true
+urxvt*font: xft:Gohufont:size=11:antialias=true
+urxvt*boldFont: xft:Gohufont:size=11:antialias=true
 
 !urxvt*font: xft:SourceCodePro:size=10:antialias=true
 !urxvt*boldFont: xft:SourceCodePro:size=10:antialias=true

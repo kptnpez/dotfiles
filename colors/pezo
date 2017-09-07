@@ -1,0 +1,36 @@
+! Rainbow 
+
+URxvt*background: #242424
+URxvt*foreground: #ebebff
+
+! black
+URxvt*color0: #333333
+URxvt*color8: #777777
+
+! red
+URxvt*color1: #bf4849
+URxvt*color9: #d97777
+
+! green
+URxvt*color2: #90a959
+URxvt*color10: #b5bd68
+
+! yellow
+URxvt*color3: #e6c45c
+URxvt*color11: #d9d982
+
+! blue
+URxvt*color4: #6a9fb5
+URxvt*color12: #99bdcc
+
+! magenta
+URxvt*color5: #b57da9
+URxvt*color13: #cca5c4
+
+! cyan
+URxvt*color6: #80bab0
+URxvt*color14: #add9d1
+
+! white
+URxvt*color7: #cccbca
+URxvt*color15: #f1f2f0

@@ -14,6 +14,7 @@ URxvt.cursorBlink: True
 URxvt*underlineColor: #181818
 URxvt.letterSpace: -0
 URxvt.buffered: false
+URxvt.internalBorder: 15
 
 !URL Support 
 URxvt.perl-ext:			default,url-select
