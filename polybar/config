@@ -12,7 +12,9 @@ background = #222
 background-dark = #bb
 foreground = #dfdfdf
 foreground-dark = #55
-primary = #ffb52a
+;primary = #ffb52a
+primary = #009BC2
+;secondary = #e60053
 secondary = #e60053
 alert = #bd2c40
 
@@ -274,7 +276,8 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = #b5ff2a
+;format-charging-underline = #ffb52a
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
